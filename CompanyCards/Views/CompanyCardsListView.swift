@@ -43,7 +43,7 @@ struct CompanyCardsListView<VM>: View where VM: CompanyCardsListDelegate {
                 .padding(Constants.spacingType1)
                 
                 if !vm.allCardsLoaded {
-                    PreloaderView()
+                    PreloaderView(textLabel: "Подзагрузка компаний")
                 }
             }
             

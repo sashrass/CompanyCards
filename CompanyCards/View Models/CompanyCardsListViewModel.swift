@@ -16,11 +16,7 @@ protocol CompanyCardsListDelegate: ObservableObject {
     func loadNextItemsIfNeeded()
 }
 
-enum LoadError {
-    case message(message: String)
-}
-
-class CompanyCardsListViewModel: CompanyCardsListDelegate {
+final class CompanyCardsListViewModel: CompanyCardsListDelegate {
     
     private var webService = WebService()
     

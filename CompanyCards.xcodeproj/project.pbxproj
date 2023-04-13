@@ -82,7 +82,6 @@
 				D9DE422A29E70B56009EF222 /* Models */,
 				D9DE421D29E6D63C009EF222 /* Views */,
 				D9DE420F29E6D5D1009EF222 /* CompanyCardsApp.swift */,
-				D9DE421129E6D5D1009EF222 /* ContentView.swift */,
 				D9DE422229E6D849009EF222 /* Extentions */,
 				D9DE422829E6EA36009EF222 /* Constants.swift */,
 				D9DE421329E6D5D1009EF222 /* Assets.xcassets */,
@@ -102,6 +101,7 @@
 		D9DE421D29E6D63C009EF222 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D9DE421129E6D5D1009EF222 /* ContentView.swift */,
 				D9DE421E29E6D688009EF222 /* CompanyCardsListView.swift */,
 				D9DE422029E6D7D4009EF222 /* ListHeaderView.swift */,
 				D9DE422529E6DA1F009EF222 /* CardCell.swift */,

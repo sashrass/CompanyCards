@@ -11,6 +11,8 @@ import UIKit
 
 struct PreloaderView: View {
     
+    let textLabel: String
+    
     private let circleFill = 0.35
     
     @State private var isRotated = false
@@ -24,7 +26,7 @@ struct PreloaderView: View {
                 .frame(width: 50, height: 50)
                 .rotationEffect(Angle(degrees: isRotated ? 360 : 0))
             
-            Text("Подгрузка компаний")
+            Text(textLabel)
                 .font(.system(size: Constants.fontSize1, weight: .light))
         }
         
@@ -55,7 +57,7 @@ private struct Ring: Shape {
 
 struct PreloaderView_Previews: PreviewProvider {
     static var previews: some View {
-        PreloaderView()
+        PreloaderView(textLabel: "Подзагрузка компаний")
     }
 }
 

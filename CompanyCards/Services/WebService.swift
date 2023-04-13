@@ -14,7 +14,7 @@ enum RequestType {
     case error
 }
 
-class WebService {
+final class WebService {
     
     func fetchCards(_ requestType: RequestType, offset: Int, completion: @escaping (Result<[CompanyResponse], Error>) -> Void) {
         var url = "http://dev.bonusmoney.pro/mobileapp"
