@@ -13,6 +13,8 @@ struct CompanyCardsListView<VM>: View where VM: CompanyCardsListDelegate {
     
     @State private var infoAlert: (isPresented: Bool, message: String) = (false, "")
     
+    @State private var userInDownloadZone = false
+    
     var body: some View {
         
         VStack(spacing: 0) {
@@ -30,7 +32,12 @@ struct CompanyCardsListView<VM>: View where VM: CompanyCardsListDelegate {
                     Rectangle()
                         .frame(width: 0, height: 0)
                         .onAppear {
+                            userInDownloadZone = true
                             vm.loadNextItemsIfNeeded()
+                        }
+                    
+                        .onDisappear {
+                            userInDownloadZone = false
                         }
                 }
                 .padding(Constants.spacingType1)
@@ -45,7 +52,9 @@ struct CompanyCardsListView<VM>: View where VM: CompanyCardsListDelegate {
         
         .alert("Ошибка", isPresented: $vm.loadError.error) {
             Button("OK") {
-                vm.loadNextItemsIfNeeded()
+                if userInDownloadZone {
+                    vm.loadNextItemsIfNeeded()
+                }
             }
         }   message: {
             Text(vm.loadError.message)
@@ -56,7 +65,6 @@ struct CompanyCardsListView<VM>: View where VM: CompanyCardsListDelegate {
         } message: {
             Text(infoAlert.message)
         }
-
         
     }
     
