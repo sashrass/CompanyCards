@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct CardCell: View {
     
@@ -41,7 +42,7 @@ struct CardCell: View {
             
             Spacer()
             
-            AsyncImage(url: URL(string: vm.logoURL)) { phase in
+            CachedAsyncImage(url: URL(string: vm.logoURL)) { phase in
                 if let image = phase.image {
                     image
                         .resizable()

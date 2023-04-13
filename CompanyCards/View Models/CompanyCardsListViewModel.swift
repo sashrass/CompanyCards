@@ -47,7 +47,7 @@ class CompanyCardsListViewModel: CompanyCardsListDelegate {
 
         itemsLoading = true
         
-        webService.fetchCards(.ideal, offset: currentOffset + 1) { [weak self] result in
+        webService.fetchCards(.all, offset: currentOffset + 1) { [weak self] result in
             
             switch result {
                 

@@ -22,6 +22,7 @@
 		D9DE423329E72182009EF222 /* CompanyCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DE423229E72182009EF222 /* CompanyCardViewModel.swift */; };
 		D9DE423629E72D81009EF222 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DE423529E72D81009EF222 /* WebService.swift */; };
 		D9DE423829E72FAE009EF222 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DE423729E72FAE009EF222 /* Errors.swift */; };
+		D9FF30B729E79AAF00892A93 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = D9FF30B629E79AAF00892A93 /* CachedAsyncImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FF30B729E79AAF00892A93 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +160,9 @@
 			dependencies = (
 			);
 			name = CompanyCards;
+			packageProductDependencies = (
+				D9FF30B629E79AAF00892A93 /* CachedAsyncImage */,
+			);
 			productName = CompanyCards;
 			productReference = D9DE420C29E6D5D1009EF222 /* CompanyCards.app */;
 			productType = "com.apple.product-type.application";
@@ -186,6 +191,9 @@
 				Base,
 			);
 			mainGroup = D9DE420329E6D5D0009EF222;
+			packageReferences = (
+				D9FF30B529E79AAF00892A93 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = D9DE420D29E6D5D1009EF222 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -427,6 +435,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D9FF30B529E79AAF00892A93 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D9FF30B629E79AAF00892A93 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9FF30B529E79AAF00892A93 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D9DE420429E6D5D0009EF222 /* Project object */;
 }
